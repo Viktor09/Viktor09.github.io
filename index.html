@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Victor Mandescu</title>
+    <meta name="description" content="Victor Mandescu - personal page and projects" />
+    <link rel="icon" href="https://avatars.githubusercontent.com/u/80954149?v=4" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+      /* small fade-in for each section, using a plain CSS animation */
+      @keyframes rise {
+        from { opacity: 0; transform: translateY(16px); }
+        to   { opacity: 1; transform: translateY(0); }
+      }
+      .rise { animation: rise 0.6s ease-out both; }
+    </style>
+  </head>
+
+  <body class="bg-slate-950 text-slate-200 antialiased selection:bg-indigo-500/40">
+    <!-- ================= NAV ================= -->
+    <nav class="sticky top-0 z-10 border-b border-white/5 bg-slate-950/80 backdrop-blur">
+      <div class="mx-auto flex max-w-5xl items-center justify-between px-4 py-4">
+        <a href="#" class="font-semibold tracking-tight text-white">victor<span class="text-indigo-400">.</span>m</a>
+        <div class="flex gap-5 text-sm text-slate-400">
+          <a href="#about" class="hover:text-white">About</a>
+          <a href="#projects" class="hover:text-white">Projects</a>
+          <a href="#contact" class="hover:text-white">Contact</a>
+        </div>
+      </div>
+    </nav>
+
+    <main class="mx-auto max-w-5xl px-4">
+      <!-- ================= HERO ================= -->
+      <section class="rise flex flex-col items-center gap-8 py-20 text-center md:flex-row md:text-left">
+        <img
+          src="https://avatars.githubusercontent.com/u/80954149?v=4"
+          alt="Victor Mandescu"
+          class="h-36 w-36 rounded-full object-cover ring-4 ring-indigo-500/40 shadow-2xl shadow-indigo-500/20"
+        />
+        <div>
+          <p class="mb-2 text-sm font-medium uppercase tracking-widest text-indigo-400">Hi, I'm</p>
+          <h1 class="text-4xl font-bold tracking-tight text-white md:text-5xl">Victor Mandescu</h1>
+          <p class="mt-4 max-w-xl text-lg text-slate-400">
+            Software developer who likes working close to the machine - operating systems,
+            networking and distributed systems - and occasionally building games, apps and tools on top.
+          </p>
+          <div class="mt-6 flex flex-wrap justify-center gap-3 md:justify-start">
+            <a href="#projects" class="rounded-lg bg-indigo-600 px-5 py-2.5 font-medium text-white transition hover:bg-indigo-500">
+              See my projects
+            </a>
+            <a href="https://github.com/Viktor09" target="_blank" rel="noopener"
+               class="rounded-lg border border-white/10 px-5 py-2.5 font-medium text-slate-200 transition hover:border-white/30">
+              GitHub
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= ABOUT + SKILLS ================= -->
+      <section id="about" class="rise scroll-mt-20 border-t border-white/5 py-16" style="animation-delay: 0.1s">
+        <h2 class="mb-6 text-2xl font-bold text-white">About me</h2>
+        <p class="max-w-3xl text-slate-400">
+          Most of my projects are written in C and C++: a memory allocator, a router, an HTTP client
+          for a REST API, a BitTorrent-style file sharing system built with MPI. I also enjoy
+          exploring other ecosystems - Kotlin for networking and IntelliJ plugins, Java, Python
+          and React Native for a hackathon app.
+        </p>
+
+        <h3 class="mt-10 mb-4 text-sm font-semibold uppercase tracking-widest text-slate-500">Languages &amp; tools</h3>
+        <ul class="flex flex-wrap gap-2 text-sm">
+          <li class="rounded-full bg-white/5 px-3 py-1 ring-1 ring-white/10">C</li>
+          <li class="rounded-full bg-white/5 px-3 py-1 ring-1 ring-white/10">C++</li>
+          <li class="rounded-full bg-white/5 px-3 py-1 ring-1 ring-white/10">Python</li>
+          <li class="rounded-full bg-white/5 px-3 py-1 ring-1 ring-white/10">Java</li>
+          <li class="rounded-full bg-white/5 px-3 py-1 ring-1 ring-white/10">Kotlin</li>
+          <li class="rounded-full bg-white/5 px-3 py-1 ring-1 ring-white/10">HTML &amp; CSS</li>
+          <li class="rounded-full bg-white/5 px-3 py-1 ring-1 ring-white/10">React Native / Expo</li>
+          <li class="rounded-full bg-white/5 px-3 py-1 ring-1 ring-white/10">MPI</li>
+          <li class="rounded-full bg-white/5 px-3 py-1 ring-1 ring-white/10">Linux</li>
+          <li class="rounded-full bg-white/5 px-3 py-1 ring-1 ring-white/10">Git</li>
+        </ul>
+      </section>
+
+      <!-- ================= PROJECTS ================= -->
+      <section id="projects" class="rise scroll-mt-20 border-t border-white/5 py-16" style="animation-delay: 0.2s">
+        <h2 class="mb-8 text-2xl font-bold text-white">Projects</h2>
+
+        <div class="grid gap-5 sm:grid-cols-2">
+          <!-- one card per project -->
+          <a href="https://github.com/Viktor09/BitTorrent-MPI" target="_blank" rel="noopener"
+             class="group rounded-2xl border border-white/5 bg-white/[0.03] p-6 transition hover:-translate-y-1 hover:border-indigo-500/40">
+            <div class="mb-3 flex items-center justify-between">
+              <h3 class="font-semibold text-white group-hover:text-indigo-300">BitTorrent-MPI</h3>
+              <span class="text-xs text-slate-500">C++</span>
+            </div>
+            <p class="text-sm text-slate-400">Peer-to-peer file sharing in the style of BitTorrent, with peers and tracker communicating over MPI.</p>
+          </a>
+
+          <a href="https://github.com/Viktor09/Memory-Allocator" target="_blank" rel="noopener"
+             class="group rounded-2xl border border-white/5 bg-white/[0.03] p-6 transition hover:-translate-y-1 hover:border-indigo-500/40">
+            <div class="mb-3 flex items-center justify-between">
+              <h3 class="font-semibold text-white group-hover:text-indigo-300">Memory Allocator</h3>
+              <span class="text-xs text-slate-500">C</span>
+            </div>
+            <p class="text-sm text-slate-400">A custom implementation of malloc / free / realloc on top of the operating system's memory primitives.</p>
+          </a>
+
+          <a href="https://github.com/Viktor09/HTTP-Client-REST" target="_blank" rel="noopener"
+             class="group rounded-2xl border border-white/5 bg-white/[0.03] p-6 transition hover:-translate-y-1 hover:border-indigo-500/40">
+            <div class="mb-3 flex items-center justify-between">
+              <h3 class="font-semibold text-white group-hover:text-indigo-300">HTTP Client for a REST API</h3>
+              <span class="text-xs text-slate-500">C</span>
+            </div>
+            <p class="text-sm text-slate-400">Command-line client that talks to a REST server: GET / POST / DELETE requests, cookies, auth tokens and JSON via Parson.</p>
+          </a>
+
+          <a href="https://github.com/Viktor09/Router-in-C" target="_blank" rel="noopener"
+             class="group rounded-2xl border border-white/5 bg-white/[0.03] p-6 transition hover:-translate-y-1 hover:border-indigo-500/40">
+            <div class="mb-3 flex items-center justify-between">
+              <h3 class="font-semibold text-white group-hover:text-indigo-300">Router in C</h3>
+              <span class="text-xs text-slate-500">C</span>
+            </div>
+            <p class="text-sm text-slate-400">The data plane of a router: packet forwarding, routing table lookup and the protocols around it.</p>
+          </a>
+
+          <a href="https://github.com/Viktor09/Custom-Protocol" target="_blank" rel="noopener"
+             class="group rounded-2xl border border-white/5 bg-white/[0.03] p-6 transition hover:-translate-y-1 hover:border-indigo-500/40">
+            <div class="mb-3 flex items-center justify-between">
+              <h3 class="font-semibold text-white group-hover:text-indigo-300">Custom Protocol</h3>
+              <span class="text-xs text-slate-500">Kotlin</span>
+            </div>
+            <p class="text-sm text-slate-400">A client-server pair speaking a custom binary protocol over sockets, with packing and unpacking of messages.</p>
+          </a>
+
+          <a href="https://github.com/Viktor09/TodoPluginKotlin" target="_blank" rel="noopener"
+             class="group rounded-2xl border border-white/5 bg-white/[0.03] p-6 transition hover:-translate-y-1 hover:border-indigo-500/40">
+            <div class="mb-3 flex items-center justify-between">
+              <h3 class="font-semibold text-white group-hover:text-indigo-300">TODO Plugin for IntelliJ</h3>
+              <span class="text-xs text-slate-500">Kotlin</span>
+            </div>
+            <p class="text-sm text-slate-400">IntelliJ plugin: mark a <code class="text-indigo-300">TODO() index</code> in code and hover it to open a box with the full task description.</p>
+          </a>
+
+          <a href="https://github.com/Viktor09/NeighConnect" target="_blank" rel="noopener"
+             class="group rounded-2xl border border-white/5 bg-white/[0.03] p-6 transition hover:-translate-y-1 hover:border-indigo-500/40">
+            <div class="mb-3 flex items-center justify-between">
+              <h3 class="font-semibold text-white group-hover:text-indigo-300">NeighConnect</h3>
+              <span class="text-xs text-slate-500">React Native</span>
+            </div>
+            <p class="text-sm text-slate-400">Mobile app built with Expo during the HackITall 2024 hackathon.</p>
+          </a>
+
+          <a href="https://github.com/Viktor09/IA4-Game" target="_blank" rel="noopener"
+             class="group rounded-2xl border border-white/5 bg-white/[0.03] p-6 transition hover:-translate-y-1 hover:border-indigo-500/40">
+            <div class="mb-3 flex items-center justify-between">
+              <h3 class="font-semibold text-white group-hover:text-indigo-300">Petru Griffon x Ghiu Simulator</h3>
+              <span class="text-xs text-slate-500">Python</span>
+            </div>
+            <p class="text-sm text-slate-400">An action game made with Pygame - a menu with difficulty levels, a player name and a gallery of famous opponents.</p>
+          </a>
+        </div>
+
+        <p class="mt-8 text-center text-sm text-slate-500">
+          More on <a href="https://github.com/Viktor09?tab=repositories" target="_blank" rel="noopener" class="text-indigo-400 hover:underline">github.com/Viktor09</a>
+        </p>
+      </section>
+
+      <!-- ================= CONTACT ================= -->
+      <section id="contact" class="rise scroll-mt-20 border-t border-white/5 py-16 text-center" style="animation-delay: 0.3s">
+        <h2 class="mb-4 text-2xl font-bold text-white">Get in touch</h2>
+        <p class="mx-auto mb-8 max-w-md text-slate-400">The easiest way to reach me or see what I'm working on is GitHub.</p>
+        <a href="https://github.com/Viktor09" target="_blank" rel="noopener"
+           class="inline-flex items-center gap-2 rounded-lg bg-white px-5 py-2.5 font-medium text-slate-900 transition hover:bg-slate-200">
+          <svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.65.5.5 5.65.5 12a11.5 11.5 0 0 0 7.86 10.92c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.42-2.7 5.4-5.26 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z"/></svg>
+          github.com/Viktor09
+        </a>
+      </section>
+    </main>
+
+    <footer class="border-t border-white/5 py-8 text-center text-xs text-slate-600">
+      © 2026 Victor Mandescu · Built with HTML &amp; Tailwind CSS · Hosted on GitHub Pages
+    </footer>
+  </body>
+</html>
